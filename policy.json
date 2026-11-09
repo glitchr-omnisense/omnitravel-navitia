@@ -1,0 +1,31 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "navitia",
+    "rateLimits": null,
+    "rights": {
+        "commercial": "unknown",
+        "openSourceRequired": null,
+        "caching": {"permission": "unknown", "maxTtl": null},
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {
+            "required": true,
+            "text": "Navitia (https://navitia.io)",
+            "url": "https://navitia.io",
+            "where": ["display"]
+        },
+        "licence": null
+    },
+    "requirements": {
+        "key": true,
+        "userAgent": {"required": false, "pattern": null}
+    },
+    "provenance": {
+        "terms": "https://navitia.io/en/?p=1571",
+        "policy": null,
+        "verifiedAt": null,
+        "declaredBy": "maintainer",
+        "contact": null,
+        "notes": "Limits and rights unknown: navitia.io's terms page refused to be read on 2026-11-10 (HTTP 403), and SNCF's api.sncf.com publishes no quota. Copies of navitia.io's terms indexed elsewhere speak of a free tier of 5,000 requests a month, paid tiers above it and a credit to navitia.io with a link; Île-de-France Mobilités' own Navitia (PRIM) states 20,000 requests a day. None of this is declared until read at its source. The attribution option replaces the credit's text with what a coverage's data licence asks."
+    }
+}

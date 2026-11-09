@@ -27,4 +27,15 @@ foreach ($sncf->departures(new DepartureQuery('stop_area:SNCF:87391003', limit: 
 ```
 
 Options: `token` and `coverage` (required), `base_uri` (`https://api.navitia.io/v1`), `timezone`
-(`Europe/Paris`), `attribution`, `timeout`. The manual: [docs/index.md](docs/index.md). MIT.
+(`Europe/Paris`), `attribution`, `timeout`; `policy`, `usage` (the family's).
+
+## Usage policy
+
+[policy.json](policy.json) declares what is known: a key, the credit to navitia.io (the
+`attribution` option's text when given). Its rate limits and rights are **unknown**: navitia.io's
+terms page (https://navitia.io/en/?p=1571) could not be read on 2026-11-10 (HTTP 403) and
+api.sncf.com publishes no quota, so nothing is enforced but what a site sets itself - its plan's
+quota, as `'policy' => ['rateLimits' => [['max' => 5000, 'window' => 'month']]]`. A 429 and its
+`Retry-After` are honoured all the same.
+
+The manual: [docs/index.md](docs/index.md). MIT.

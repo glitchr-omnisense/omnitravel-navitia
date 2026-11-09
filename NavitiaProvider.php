@@ -2,6 +2,8 @@
 
 namespace Omnitravel\Navitia;
 
+use Omnisense\Contracts\Policy\DeclaresUsagePolicyInterface;
+use Omnisense\Contracts\Policy\UsagePolicy;
 use Omnitravel\Capabilities;
 use Omnitravel\Exception\NotSupportedException;
 use Omnitravel\Http\Data;
@@ -32,8 +34,11 @@ use Omnitravel\TimetablesInterface;
  * header of every request. Navitia writes and reads times in the
  * coverage's time zone, without an offset ("20261109T143000").
  */
-final class NavitiaProvider implements TimetablesInterface, ItinerariesInterface, NetworkInterface
+final class NavitiaProvider implements TimetablesInterface, ItinerariesInterface, NetworkInterface, DeclaresUsagePolicyInterface
 {
+    /** Navitia's usage policy: its limits unknown until its terms are read (provenance.notes). */
+    public const POLICY = __DIR__.'/policy.json';
+
     private const FORMAT = 'Ymd\THis';
     private const PAGES = 20;
 
@@ -56,6 +61,21 @@ final class NavitiaProvider implements TimetablesInterface, ItinerariesInterface
         return 'Navitia';
     }
 
+    /** The policy of policy.json, its credit the attribution option's when one is given. */
+    public function usagePolicy(): UsagePolicy
+    {
+        $policy = UsagePolicy::fromFile(self::POLICY);
+        if (null === $this->attribution) {
+            return $policy;
+        }
+        $data = $policy->toArray();
+        $rights = \is_array($data['rights']) ? $data['rights'] : [];
+        $rights['attribution'] = ['text' => $this->attribution] + (\is_array($rights['attribution'] ?? null) ? $rights['attribution'] : []);
+        $data['rights'] = $rights;
+
+        return UsagePolicy::fromArray($data);
+    }
+
     public function capabilities(): Capabilities
     {
         return new Capabilities(
@@ -71,6 +91,7 @@ final class NavitiaProvider implements TimetablesInterface, ItinerariesInterface
             modes: [Mode::Tram, Mode::Metro, Mode::Rail, Mode::Suburban, Mode::RegionalRail, Mode::LongDistanceRail, Mode::Bus, Mode::Trolleybus, Mode::Coach, Mode::Ferry, Mode::AerialLift, Mode::Funicular, Mode::Air, Mode::OnDemand, Mode::Walk, Mode::Bike, Mode::Car],
             attribution: $this->attribution ?? 'Navitia (https://navitia.io)',
             terms: ['https://doc.navitia.io/'],
+            policy: $this->usagePolicy(),
         );
     }
 

@@ -17,7 +17,9 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  * "sncf"...), base_uri (https://api.navitia.io/v1; https://api.sncf.com/v1
  * for SNCF's), timezone (the coverage's, in which Navitia writes and reads
  * times: Europe/Paris; each answer's context.timezone wins), attribution
- * (what the coverage's data licence asks to show), timeout (seconds).
+ * (what the coverage's data licence asks to show), timeout (seconds); policy
+ * (the site's tightening of Navitia's usage policy: the plan's quota, whose
+ * figures Navitia's policy leaves unknown), usage.
  */
 final class NavitiaFactory extends ProviderFactory
 {
@@ -59,7 +61,7 @@ final class NavitiaFactory extends ProviderFactory
         }
 
         return new NavitiaProvider(
-            new JsonClient($http, 'Navitia', ['Authorization' => (string) $c->string('token'), 'Accept' => 'application/json']),
+            new JsonClient($http, 'Navitia', ['Authorization' => (string) $c->string('token'), 'Accept' => 'application/json'], $c->backoff()),
             $base,
             $coverage,
             $timezone,
