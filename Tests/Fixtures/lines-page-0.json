@@ -1,0 +1,4 @@
+{"pagination": {"total_result": 3, "start_page": 0, "items_per_page": 2, "items_on_page": 2}, "lines": [
+ {"id": "line:SNCF:N", "name": "Paris Montparnasse - Rambouillet / Dreux / Mantes", "code": "N", "color": "00A88F", "text_color": "FFFFFF", "network": {"id": "network:SNCF:Transilien", "name": "Transilien"}, "physical_modes": [{"id": "physical_mode:RapidTransit", "name": "Train Transilien"}], "commercial_mode": {"id": "commercial_mode:Transilien", "name": "Transilien"}},
+ {"id": "line:SNCF:FR:Line::PARIS-NANTES:", "name": "Paris - Angers - Nantes", "code": "", "color": "", "network": {"id": "network:SNCF:TGV", "name": "TGV INOUI"}, "physical_modes": [{"id": "physical_mode:LongDistanceTrain", "name": "Train grande vitesse"}]}
+]}

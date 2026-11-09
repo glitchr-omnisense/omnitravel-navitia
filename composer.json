@@ -1,0 +1,55 @@
+{
+    "name": "omnitravel/navitia",
+    "type": "library",
+    "description": "Omnitravel's Navitia, under any PHP host: a stop area's or a stop point's next departures and arrivals in real time, journeys from A to B, the stops near a point or by name, the lines of a coverage and their stops, its networks - from navitia.io or SNCF's api.sncf.com (the same API), with the key given by reference.",
+    "keywords": [
+        "navitia",
+        "sncf",
+        "transit",
+        "public-transport",
+        "journey-planner",
+        "departures",
+        "real-time",
+        "france",
+        "framework-agnostic",
+        "omnitravel"
+    ],
+    "homepage": "https://github.com/glitchr-omnisense/omnitravel-navitia",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "omnisense/omnitravel": "^1.0@dev",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnitravel\\Navitia\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnitravel\\Navitia\\Tests\\": "Tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-1.x": "1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

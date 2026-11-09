@@ -1,0 +1,6 @@
+{"stop_areas": [
+ {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}},
+ {"id": "stop_area:SNCF:87396002", "name": "Le Mans", "coord": {"lon": "0.192246", "lat": "47.995409"}},
+ {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}},
+ {"id": "stop_area:SNCF:87481002", "name": "Nantes", "coord": {"lon": "-1.542183", "lat": "47.217247"}}
+]}

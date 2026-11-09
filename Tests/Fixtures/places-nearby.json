@@ -1,0 +1,5 @@
+{"context": {"timezone": "Europe/Paris"}, "places_nearby": [
+ {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse (Paris)", "embedded_type": "stop_area", "distance": "236", "stop_area": {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}}},
+ {"id": "stop_area:SNCF:87391102", "name": "Paris Vaugirard (Paris)", "embedded_type": "stop_area", "distance": "412", "stop_area": {"id": "stop_area:SNCF:87391102", "name": "Paris Vaugirard", "coord": {"lon": "2.318052", "lat": "48.839305"}}},
+ {"id": "poi:osm:node:1", "name": "A café", "embedded_type": "poi", "distance": "20", "poi": {"id": "poi:osm:node:1", "name": "A café", "coord": {"lon": "2.3240", "lat": "48.8431"}}}
+]}

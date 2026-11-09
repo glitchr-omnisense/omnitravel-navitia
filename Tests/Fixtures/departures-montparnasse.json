@@ -1,0 +1,21 @@
+{
+ "pagination": {"total_result": 2, "start_page": 0, "items_per_page": 3, "items_on_page": 2},
+ "context": {"current_datetime": "20261109T140000", "timezone": "Europe/Paris"},
+ "departures": [
+  {
+   "display_informations": {"direction": "Angers Saint-Laud (Angers)", "code": "", "network": "SNCF", "color": "", "text_color": "", "label": "Paris - Angers - Nantes", "name": "Paris - Angers - Nantes", "commercial_mode": "TGV INOUI", "physical_mode": "Train grande vitesse", "headsign": "8807", "trip_short_name": "8807",
+    "links": [{"type": "vehicle_journey", "id": "vehicle_journey:SNCF:2026-11-09:8807:1187:Train"}, {"type": "line", "id": "line:SNCF:FR:Line::PARIS-NANTES:"}, {"type": "physical_mode", "id": "physical_mode:LongDistanceTrain"}]},
+   "stop_point": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}, "platform_code": "4", "stop_area": {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse", "timezone": "Europe/Paris"}},
+   "route": {"id": "route:SNCF:FR:Line::PARIS-NANTES:", "name": "Paris - Nantes", "direction": {"id": "stop_area:SNCF:87481002", "name": "Nantes (Nantes)"},
+    "line": {"id": "line:SNCF:FR:Line::PARIS-NANTES:", "name": "Paris - Angers - Nantes", "code": "", "color": "", "network": {"id": "network:SNCF:TGV", "name": "TGV INOUI"}, "physical_modes": [{"id": "physical_mode:LongDistanceTrain", "name": "Train grande vitesse"}]}},
+   "stop_date_time": {"departure_date_time": "20261109T141000", "base_departure_date_time": "20261109T140200", "arrival_date_time": "20261109T141000", "base_arrival_date_time": "20261109T140200", "data_freshness": "realtime"}
+  },
+  {
+   "display_informations": {"direction": "Chartres (Chartres)", "code": "N", "network": "Transilien", "color": "00A88F", "text_color": "FFFFFF", "label": "N", "name": "N", "commercial_mode": "Transilien", "physical_mode": "Train Transilien", "headsign": "VOLA", "trip_short_name": "VOLA",
+    "links": [{"type": "vehicle_journey", "id": "vehicle_journey:SNCF:2026-11-09:VOLA:1187:Train"}, {"type": "line", "id": "line:SNCF:N"}, {"type": "physical_mode", "id": "physical_mode:RapidTransit"}]},
+   "stop_point": {"id": "stop_point:SNCF:87391003:Transilien", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}, "stop_area": {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse", "timezone": "Europe/Paris"}},
+   "route": {"id": "route:SNCF:N-1", "name": "Paris - Chartres", "direction": {"id": "stop_area:SNCF:87394007", "name": "Chartres (Chartres)"}},
+   "stop_date_time": {"departure_date_time": "20261109T140500", "base_departure_date_time": "20261109T140500", "arrival_date_time": "20261109T140500", "base_arrival_date_time": "20261109T140500", "data_freshness": "base_schedule"}
+  }
+ ]
+}

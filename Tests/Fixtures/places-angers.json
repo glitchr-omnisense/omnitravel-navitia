@@ -1,0 +1,4 @@
+{"context": {"timezone": "Europe/Paris"}, "places": [
+ {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud (Angers)", "embedded_type": "stop_area", "quality": 90, "stop_area": {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}, "timezone": "Europe/Paris"}},
+ {"id": "admin:fr:49007", "name": "Angers (49000-49100)", "embedded_type": "administrative_region", "administrative_region": {"id": "admin:fr:49007", "name": "Angers", "coord": {"lon": "-0.5518", "lat": "47.4712"}}}
+]}

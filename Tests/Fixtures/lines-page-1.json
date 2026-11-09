@@ -1,0 +1,3 @@
+{"pagination": {"total_result": 3, "start_page": 1, "items_per_page": 2, "items_on_page": 1}, "lines": [
+ {"id": "line:SNCF:TER-PDL-01", "name": "Angers - Nantes", "code": "TER", "color": "", "network": {"id": "network:SNCF:TER", "name": "TER Pays de la Loire"}, "physical_modes": [{"id": "physical_mode:LocalTrain", "name": "TER / Intercités"}]}
+]}

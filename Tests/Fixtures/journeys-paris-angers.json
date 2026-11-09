@@ -1,0 +1,30 @@
+{
+ "context": {"current_datetime": "20261109T133000", "timezone": "Europe/Paris"},
+ "journeys": [
+  {
+   "duration": 6060, "nb_transfers": 0, "departure_date_time": "20261109T135500", "arrival_date_time": "20261109T154100", "requested_date_time": "20261109T133000", "type": "best", "status": "",
+   "sections": [
+    {"id": "section_0", "type": "street_network", "mode": "walking", "duration": 480, "departure_date_time": "20261109T135500", "arrival_date_time": "20261109T140300", "data_freshness": "base_schedule",
+     "from": {"id": "2.3245;48.8432", "name": "Rue de l'Arrivée (Paris)", "embedded_type": "address", "address": {"id": "2.3245;48.8432", "name": "Rue de l'Arrivée", "coord": {"lon": "2.3245", "lat": "48.8432"}}},
+     "to": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse (Paris)", "embedded_type": "stop_point", "stop_point": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}, "stop_area": {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse"}}},
+     "geojson": {"type": "LineString", "coordinates": [[2.3245, 48.8432], [2.3226, 48.8423], [2.320514, 48.841172]], "properties": [{"length": 412}]}},
+    {"id": "section_1", "type": "waiting", "duration": 120, "departure_date_time": "20261109T140300", "arrival_date_time": "20261109T140500"},
+    {"id": "section_2", "type": "public_transport", "duration": 5640, "departure_date_time": "20261109T141000", "arrival_date_time": "20261109T154000", "base_departure_date_time": "20261109T140200", "base_arrival_date_time": "20261109T153200", "data_freshness": "realtime",
+     "display_informations": {"direction": "Angers Saint-Laud (Angers)", "code": "", "network": "SNCF", "label": "Paris - Angers - Nantes", "name": "Paris - Angers - Nantes", "commercial_mode": "TGV INOUI", "physical_mode": "Train grande vitesse", "headsign": "8807", "trip_short_name": "8807",
+      "links": [{"type": "line", "id": "line:SNCF:FR:Line::PARIS-NANTES:"}, {"type": "network", "id": "network:SNCF:TGV"}]},
+     "links": [{"type": "vehicle_journey", "id": "vehicle_journey:SNCF:2026-11-09:8807:1187:Train"}, {"type": "physical_mode", "id": "physical_mode:LongDistanceTrain"}],
+     "from": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse (Paris)", "embedded_type": "stop_point", "stop_point": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}, "platform_code": "4", "stop_area": {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse"}}},
+     "to": {"id": "stop_point:SNCF:87484006:LongDistanceTrain", "name": "Angers Saint-Laud (Angers)", "embedded_type": "stop_point", "stop_point": {"id": "stop_point:SNCF:87484006:LongDistanceTrain", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}, "stop_area": {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud"}}},
+     "stop_date_times": [
+      {"stop_point": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}}, "arrival_date_time": "20261109T141000", "departure_date_time": "20261109T141000"},
+      {"stop_point": {"id": "stop_point:SNCF:87396002:LongDistanceTrain", "name": "Le Mans", "coord": {"lon": "0.192246", "lat": "47.995409"}}, "arrival_date_time": "20261109T150100", "departure_date_time": "20261109T150400"},
+      {"stop_point": {"id": "stop_point:SNCF:87484006:LongDistanceTrain", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}}, "arrival_date_time": "20261109T154000", "departure_date_time": "20261109T154000"}
+     ],
+     "geojson": {"type": "LineString", "coordinates": [[2.320514, 48.841172], [0.192246, 47.995409], [-0.556583, 47.464511]], "properties": [{"length": 287000}]}},
+    {"id": "section_3", "type": "transfer", "transfer_type": "walking", "duration": 60, "departure_date_time": "20261109T154000", "arrival_date_time": "20261109T154100",
+     "from": {"id": "stop_point:SNCF:87484006:LongDistanceTrain", "name": "Angers Saint-Laud (Angers)", "embedded_type": "stop_point", "stop_point": {"id": "stop_point:SNCF:87484006:LongDistanceTrain", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}}},
+     "to": {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud (Angers)", "embedded_type": "stop_area", "stop_area": {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}}}}
+   ]
+  }
+ ]
+}

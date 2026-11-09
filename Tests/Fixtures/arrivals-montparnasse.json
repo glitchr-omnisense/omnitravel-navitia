@@ -1,0 +1,12 @@
+{
+ "context": {"current_datetime": "20261109T140000", "timezone": "Europe/Paris"},
+ "arrivals": [
+  {
+   "display_informations": {"direction": "Paris Montparnasse (Paris)", "code": "", "network": "SNCF", "label": "Nantes - Angers - Paris", "name": "Nantes - Angers - Paris", "commercial_mode": "TGV INOUI", "headsign": "8820", "trip_short_name": "8820",
+    "links": [{"type": "vehicle_journey", "id": "vehicle_journey:SNCF:2026-11-09:8820:1187:Train"}, {"type": "physical_mode", "id": "physical_mode:LongDistanceTrain"}]},
+   "stop_point": {"id": "stop_point:SNCF:87391003:LongDistanceTrain", "name": "Paris Montparnasse", "coord": {"lon": "2.320514", "lat": "48.841172"}, "platform_code": "7", "stop_area": {"id": "stop_area:SNCF:87391003", "name": "Paris Montparnasse", "timezone": "Europe/Paris"}},
+   "route": {"id": "route:SNCF:FR:Line::NANTES-PARIS:", "name": "Nantes - Paris"},
+   "stop_date_time": {"departure_date_time": "20261109T142400", "base_departure_date_time": "20261109T142400", "arrival_date_time": "20261109T142400", "base_arrival_date_time": "20261109T142400", "data_freshness": "realtime"}
+  }
+ ]
+}
