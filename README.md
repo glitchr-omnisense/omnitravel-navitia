@@ -11,6 +11,38 @@ or SNCF's (`sncf` at `https://api.sncf.com/v1`, the same API).
   and by name (`places`), the coverage's lines page by page, a line's or a route's stop areas, the
   lines of a stop area, the networks as operators.
 
+## Install and a first call
+
+```sh
+composer require omnitravel/navitia
+```
+
+No account for this first call: Navitia's answer is recorded (`Omnitravel\Testing\RecordedHttpClient`
+answers in place of the API), so nothing leaves the process. A real call needs a token: a
+navitia.io account, or SNCF's at api.sncf.com for the `sncf` coverage. Give it by reference
+(an environment variable, a secrets vault), never in a file.
+
+```php
+<?php
+
+require __DIR__.'/vendor/autoload.php';
+
+use Omnitravel\Navitia\NavitiaFactory;
+use Omnitravel\Testing\RecordedHttpClient;
+
+// Navitia's answer to a search by name, recorded: no token, nothing sent. HttpClient::create() for a real call.
+$http = RecordedHttpClient::routes([
+    '~^GET https://api\.sncf\.com/v1/coverage/sncf/places\?q=Angers~' => [200, '{"places": [{"id": "stop_area:SNCF:87484006", "embedded_type": "stop_area", "stop_area": {"id": "stop_area:SNCF:87484006", "name": "Angers Saint-Laud", "coord": {"lon": "-0.556583", "lat": "47.464511"}, "timezone": "Europe/Paris"}}]}'],
+]);
+$sncf = (new NavitiaFactory($http))->create(['token' => 'recorded', 'coverage' => 'sncf', 'base_uri' => 'https://api.sncf.com/v1']);
+
+foreach ($sncf->searchStops('Angers', 1) as $station) {
+    echo $station->name, ' ', $station->id, "\n";   // Angers Saint-Laud stop_area:SNCF:87484006
+}
+```
+
+With your token, a station's next departures:
+
 ```php
 use Omnitravel\Model\DepartureQuery;
 use Omnitravel\Navitia\NavitiaFactory;
